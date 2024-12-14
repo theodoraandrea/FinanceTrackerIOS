@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E90FCE612D0D693B0046BE38 /* SafariView in Frameworks */ = {isa = PBXBuildFile; productRef = E90FCE602D0D693B0046BE38 /* SafariView */; };
+		E90FCE632D0D7A130046BE38 /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FCE622D0D7A130046BE38 /* TransactionDetail.swift */; };
+		E931FE9E2CE2FFF400FA3DB1 /* FinanceTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931FE9D2CE2FFF400FA3DB1 /* FinanceTrackerApp.swift */; };
+		E931FEA02CE2FFF400FA3DB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931FE9F2CE2FFF400FA3DB1 /* ContentView.swift */; };
+		E931FEA22CE2FFF600FA3DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E931FEA12CE2FFF600FA3DB1 /* Assets.xcassets */; };
+		E931FEA52CE2FFF600FA3DB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E931FEA42CE2FFF600FA3DB1 /* Preview Assets.xcassets */; };
+		E931FEAE2CE3200B00FA3DB1 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931FEAD2CE3200B00FA3DB1 /* WebService.swift */; };
+		E931FEB32CE39F3000FA3DB1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931FEB22CE39F3000FA3DB1 /* HomeViewModel.swift */; };
+		E931FEB52CE39F9A00FA3DB1 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931FEB42CE39F9A00FA3DB1 /* LandingViewModel.swift */; };
+		E931FEB82CE3A86F00FA3DB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931FEB72CE3A86F00FA3DB1 /* User.swift */; };
+		E9960B8E2CEA33B90023643D /* TransactionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960B8D2CEA33B90023643D /* TransactionForm.swift */; };
+		E9960B902CEA33E00023643D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960B8F2CEA33E00023643D /* Transaction.swift */; };
+		E9960B922CEA37FA0023643D /* AddTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960B912CEA37FA0023643D /* AddTransaction.swift */; };
+		E9960B942CEA38880023643D /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960B932CEA38880023643D /* TransactionViewModel.swift */; };
+		E9CB13FB2CE47EEE00A73A28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E9CB13FA2CE47EEE00A73A28 /* FirebaseAnalytics */; };
+		E9CB13FD2CE47EEE00A73A28 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E9CB13FC2CE47EEE00A73A28 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		E9CB13FF2CE4897200A73A28 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB13FE2CE4897200A73A28 /* SignUp.swift */; };
+		E9CB14012CE489AD00A73A28 /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB14002CE489AD00A73A28 /* Landing.swift */; };
+		E9CB14032CE48A1700A73A28 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB14022CE48A1700A73A28 /* Home.swift */; };
+		E9CB14052CE48BF100A73A28 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB14042CE48BF100A73A28 /* SignUpViewModel.swift */; };
+		E9D70F282CF5A02C0010401A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F272CF5A02C0010401A /* Helper.swift */; };
+		E9D70F2F2CF5A2220010401A /* NumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F292CF5A2220010401A /* NumberButton.swift */; };
+		E9D70F302CF5A2220010401A /* MoneyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F2A2CF5A2220010401A /* MoneyChart.swift */; };
+		E9D70F312CF5A2220010401A /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F2B2CF5A2220010401A /* ListItem.swift */; };
+		E9D70F322CF5A2220010401A /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F2C2CF5A2220010401A /* ForgotPassword.swift */; };
+		E9D70F332CF5A2220010401A /* NumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F2D2CF5A2220010401A /* NumberPad.swift */; };
+		E9D70F342CF5A2220010401A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F2E2CF5A2220010401A /* TextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E90FCE622D0D7A130046BE38 /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetail.swift; sourceTree = "<group>"; };
+		E931FE9A2CE2FFF400FA3DB1 /* FinanceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E931FE9D2CE2FFF400FA3DB1 /* FinanceTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceTrackerApp.swift; sourceTree = "<group>"; };
+		E931FE9F2CE2FFF400FA3DB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E931FEA12CE2FFF600FA3DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E931FEA42CE2FFF600FA3DB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E931FEAD2CE3200B00FA3DB1 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		E931FEB22CE39F3000FA3DB1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E931FEB42CE39F9A00FA3DB1 /* LandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		E931FEB72CE3A86F00FA3DB1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E9960B8D2CEA33B90023643D /* TransactionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionForm.swift; sourceTree = "<group>"; };
+		E9960B8F2CEA33E00023643D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		E9960B912CEA37FA0023643D /* AddTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransaction.swift; sourceTree = "<group>"; };
+		E9960B932CEA38880023643D /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		E9CB13FE2CE4897200A73A28 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		E9CB14002CE489AD00A73A28 /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
+		E9CB14022CE48A1700A73A28 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E9CB14042CE48BF100A73A28 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		E9D70F272CF5A02C0010401A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		E9D70F292CF5A2220010401A /* NumberButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberButton.swift; sourceTree = "<group>"; };
+		E9D70F2A2CF5A2220010401A /* MoneyChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyChart.swift; sourceTree = "<group>"; };
+		E9D70F2B2CF5A2220010401A /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		E9D70F2C2CF5A2220010401A /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		E9D70F2D2CF5A2220010401A /* NumberPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPad.swift; sourceTree = "<group>"; };
+		E9D70F2E2CF5A2220010401A /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E931FE972CE2FFF400FA3DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E90FCE612D0D693B0046BE38 /* SafariView in Frameworks */,
+				E9CB13FB2CE47EEE00A73A28 /* FirebaseAnalytics in Frameworks */,
+				E9CB13FD2CE47EEE00A73A28 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E931FE912CE2FFF400FA3DB1 = {
+			isa = PBXGroup;
+			children = (
+				E931FE9C2CE2FFF400FA3DB1 /* FinanceTracker */,
+				E931FE9B2CE2FFF400FA3DB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E931FE9B2CE2FFF400FA3DB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E931FE9A2CE2FFF400FA3DB1 /* FinanceTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E931FE9C2CE2FFF400FA3DB1 /* FinanceTracker */ = {
+			isa = PBXGroup;
+			children = (
+				E931FEB62CE3A86400FA3DB1 /* Models */,
+				E931FEAF2CE3250300FA3DB1 /* ViewModels */,
+				E931FEAC2CE31FF700FA3DB1 /* Services */,
+				E931FEAB2CE3004D00FA3DB1 /* Views */,
+				E931FE9D2CE2FFF400FA3DB1 /* FinanceTrackerApp.swift */,
+				E931FE9F2CE2FFF400FA3DB1 /* ContentView.swift */,
+				E931FEA12CE2FFF600FA3DB1 /* Assets.xcassets */,
+				E931FEA32CE2FFF600FA3DB1 /* Preview Content */,
+			);
+			path = FinanceTracker;
+			sourceTree = "<group>";
+		};
+		E931FEA32CE2FFF600FA3DB1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E931FEA42CE2FFF600FA3DB1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E931FEAB2CE3004D00FA3DB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9CB14022CE48A1700A73A28 /* Home.swift */,
+				E9CB13FE2CE4897200A73A28 /* SignUp.swift */,
+				E9CB14002CE489AD00A73A28 /* Landing.swift */,
+				E933629A2CF5BFD200EE754D /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E931FEAC2CE31FF700FA3DB1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E931FEAD2CE3200B00FA3DB1 /* WebService.swift */,
+				E9D70F272CF5A02C0010401A /* Helper.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E931FEAF2CE3250300FA3DB1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E931FEB42CE39F9A00FA3DB1 /* LandingViewModel.swift */,
+				E931FEB22CE39F3000FA3DB1 /* HomeViewModel.swift */,
+				E9CB14042CE48BF100A73A28 /* SignUpViewModel.swift */,
+				E9960B932CEA38880023643D /* TransactionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E931FEB62CE3A86400FA3DB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E931FEB72CE3A86F00FA3DB1 /* User.swift */,
+				E9960B8F2CEA33E00023643D /* Transaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E933629A2CF5BFD200EE754D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E9960B912CEA37FA0023643D /* AddTransaction.swift */,
+				E9D70F2C2CF5A2220010401A /* ForgotPassword.swift */,
+				E9D70F2B2CF5A2220010401A /* ListItem.swift */,
+				E9D70F2A2CF5A2220010401A /* MoneyChart.swift */,
+				E9D70F292CF5A2220010401A /* NumberButton.swift */,
+				E9D70F2D2CF5A2220010401A /* NumberPad.swift */,
+				E9D70F2E2CF5A2220010401A /* TextField.swift */,
+				E9960B8D2CEA33B90023643D /* TransactionForm.swift */,
+				E90FCE622D0D7A130046BE38 /* TransactionDetail.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E931FE992CE2FFF400FA3DB1 /* FinanceTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E931FEA82CE2FFF600FA3DB1 /* Build configuration list for PBXNativeTarget "FinanceTracker" */;
+			buildPhases = (
+				E931FE962CE2FFF400FA3DB1 /* Sources */,
+				E931FE972CE2FFF400FA3DB1 /* Frameworks */,
+				E931FE982CE2FFF400FA3DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinanceTracker;
+			packageProductDependencies = (
+				E9CB13FA2CE47EEE00A73A28 /* FirebaseAnalytics */,
+				E9CB13FC2CE47EEE00A73A28 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				E90FCE602D0D693B0046BE38 /* SafariView */,
+			);
+			productName = FinanceTracker;
+			productReference = E931FE9A2CE2FFF400FA3DB1 /* FinanceTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E931FE922CE2FFF400FA3DB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					E931FE992CE2FFF400FA3DB1 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = E931FE952CE2FFF400FA3DB1 /* Build configuration list for PBXProject "FinanceTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E931FE912CE2FFF400FA3DB1;
+			packageReferences = (
+				E9CB13F92CE47EEE00A73A28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E90FCE5F2D0D693B0046BE38 /* XCRemoteSwiftPackageReference "SafariView" */,
+			);
+			productRefGroup = E931FE9B2CE2FFF400FA3DB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E931FE992CE2FFF400FA3DB1 /* FinanceTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E931FE982CE2FFF400FA3DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E931FEA52CE2FFF600FA3DB1 /* Preview Assets.xcassets in Resources */,
+				E931FEA22CE2FFF600FA3DB1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E931FE962CE2FFF400FA3DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9CB13FF2CE4897200A73A28 /* SignUp.swift in Sources */,
+				E931FEAE2CE3200B00FA3DB1 /* WebService.swift in Sources */,
+				E9D70F2F2CF5A2220010401A /* NumberButton.swift in Sources */,
+				E9D70F342CF5A2220010401A /* TextField.swift in Sources */,
+				E9D70F302CF5A2220010401A /* MoneyChart.swift in Sources */,
+				E9D70F282CF5A02C0010401A /* Helper.swift in Sources */,
+				E9960B922CEA37FA0023643D /* AddTransaction.swift in Sources */,
+				E9CB14052CE48BF100A73A28 /* SignUpViewModel.swift in Sources */,
+				E931FEB52CE39F9A00FA3DB1 /* LandingViewModel.swift in Sources */,
+				E931FEB82CE3A86F00FA3DB1 /* User.swift in Sources */,
+				E9960B902CEA33E00023643D /* Transaction.swift in Sources */,
+				E931FEA02CE2FFF400FA3DB1 /* ContentView.swift in Sources */,
+				E9CB14012CE489AD00A73A28 /* Landing.swift in Sources */,
+				E9D70F332CF5A2220010401A /* NumberPad.swift in Sources */,
+				E9D70F312CF5A2220010401A /* ListItem.swift in Sources */,
+				E931FEB32CE39F3000FA3DB1 /* HomeViewModel.swift in Sources */,
+				E9D70F322CF5A2220010401A /* ForgotPassword.swift in Sources */,
+				E90FCE632D0D7A130046BE38 /* TransactionDetail.swift in Sources */,
+				E931FE9E2CE2FFF400FA3DB1 /* FinanceTrackerApp.swift in Sources */,
+				E9960B8E2CEA33B90023643D /* TransactionForm.swift in Sources */,
+				E9CB14032CE48A1700A73A28 /* Home.swift in Sources */,
+				E9960B942CEA38880023643D /* TransactionViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E931FEA62CE2FFF600FA3DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E931FEA72CE2FFF600FA3DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E931FEA92CE2FFF600FA3DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FinanceTracker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FinanceTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E931FEAA2CE2FFF600FA3DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FinanceTracker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FinanceTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E931FE952CE2FFF400FA3DB1 /* Build configuration list for PBXProject "FinanceTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E931FEA62CE2FFF600FA3DB1 /* Debug */,
+				E931FEA72CE2FFF600FA3DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E931FEA82CE2FFF600FA3DB1 /* Build configuration list for PBXNativeTarget "FinanceTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E931FEA92CE2FFF600FA3DB1 /* Debug */,
+				E931FEAA2CE2FFF600FA3DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E90FCE5F2D0D693B0046BE38 /* XCRemoteSwiftPackageReference "SafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bestler/SafariView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E9CB13F92CE47EEE00A73A28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E90FCE602D0D693B0046BE38 /* SafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E90FCE5F2D0D693B0046BE38 /* XCRemoteSwiftPackageReference "SafariView" */;
+			productName = SafariView;
+		};
+		E9CB13FA2CE47EEE00A73A28 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9CB13F92CE47EEE00A73A28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		E9CB13FC2CE47EEE00A73A28 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9CB13F92CE47EEE00A73A28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E931FE922CE2FFF400FA3DB1 /* Project object */;
+}
