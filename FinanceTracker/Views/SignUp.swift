@@ -17,6 +17,9 @@ struct SignUp: View {
     @State var emailValid: Bool = true
     @State var showPassword: Bool = false
     @State var showConfirmPassword: Bool = false
+    
+    @State var showSuccessAlert:Bool = false
+    @State var showErrorAlert:Bool = false
         
     var body: some View {
             ScrollView {
@@ -168,12 +171,12 @@ struct SignUp: View {
                         vm.signup { success in
                             if success {
                                 print("Signup succeeded")
+                                showSuccessAlert = true
                                 path.removeLast()
                                 
                             } else {
                                 print("Signup failed")
-                                //path.removeLast()
-
+                                showErrorAlert = true
                             }
                         }
                        
@@ -187,6 +190,16 @@ struct SignUp: View {
                     .background(.black)
                     .cornerRadius(15)
                     
+                }
+                .alert("Success", isPresented: $showSuccessAlert) {
+                    Button("OK", role: .cancel) { }
+                } message: {
+                    Text("You have successfully signed up!")
+                }
+                .alert("Sign up failed", isPresented: $showErrorAlert) {
+                    Button("OK", role: .cancel) {}
+                } message: {
+                    Text("An error has occurred.")
                 }
                 .padding(.horizontal, 30)
             }

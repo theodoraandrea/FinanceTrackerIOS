@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SafariServices
+//import SafariServices
 import SafariView
 
 struct Landing: View {
@@ -38,7 +38,8 @@ struct Landing: View {
                   
                     SignInBody {
                         VStack {
-                            TextFieldWithUnderlineStyle(title: "Email or username", placeholder: "Enter your email or username", textBinding: $viewModel.emailOrUsername, required: false)
+                            TextFieldWithUnderlineStyle(title: "Email or username", placeholder: "Enter your email or username", 
+                                                        textBinding: $viewModel.emailOrUsername, required: false)
                             
                             VStack {
                                 Text("Password")
@@ -113,6 +114,7 @@ struct Landing: View {
                             
                             Button(action: {
                                 viewModel.initiateOauth()
+                                //viewModel.googleSignIn()
                             }) {
                                 
                                 Image(.google).renderingMode(.template)
@@ -163,17 +165,6 @@ struct Landing: View {
        
         
     }
-    
-    /*
-    struct SafariView: UIViewControllerRepresentable {
-        let url: URL
-        
-        func makeUIViewController(context: Context) -> SFSafariViewController {
-            SFSafariViewController(url: url)
-        }
-        
-        func updateUIViewController(_ uiViewController: SFSafariViewController, context: Context) {}
-    }*/
     
     struct SignInBody<Content: View>: View {
         let content: Content

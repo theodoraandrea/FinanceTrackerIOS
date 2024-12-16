@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @ObservedObject var viewModel: HomeViewModel
+    @ObservedObject var landingVM: LandingViewModel
     @Binding var path: NavigationPath
     
     @State var showAddNew:Bool = false
@@ -45,10 +46,8 @@ struct Home: View {
     }
         
     var year: String {
-        //let date = getDisplayedMonth(counter:datePointer)
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY"
-        //return formatter.string(from: date)
         return date.formatted(.dateTime.year())
     }
     
@@ -60,101 +59,120 @@ struct Home: View {
      }
     
     var body: some View {
-        ZStack {
-            //Header
-            VStack {
-                ZStack {
-                    Color.accentColor
-                    HStack {
-                        Text("Welcome,")
-                            .foregroundStyle(Color.white)
-                            .padding(0)
-                        Text(viewModel.name)
-                            .foregroundStyle(Color.white)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        Spacer()
-                        VStack (alignment: .trailing) {
-                            Text("Balance")
-                                .foregroundStyle(Color.white)
-                            Text(viewModel.balance.formatted())
-                                .font(.title3)
-                                .foregroundStyle(Color.white)
-                                .fontWeight(.bold)
-                        }
-                    }
-                    .padding(20)
-                    .padding(.top, 80)
-                }
-                .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                Spacer()
-            }.ignoresSafeArea()
-                .zIndex(2)
-
-            if showTransactionDetail {
-                TransactionDetail(item: currentTransaction!, show: $showTransactionDetail)
-                        .zIndex(5)
-            } else {
-                
-                
-                //Content
-                ScrollView {
-                    VStack (spacing: 20) {
+        NavigationStack (path: $path) {
+            ZStack {
+                //Header
+                VStack {
+                    ZStack {
+                        Color.accentColor
                         HStack {
-                            Button (action: {
-                                datePointer -= 1
-                                viewModel.getAllTransactions(date: "\(year)-\(month)")
-                            }){
-                                Image(systemName:"chevron.backward")
-                                    .font(.title2)
+                            VStack (alignment: .leading){
+                                Text("Balance")
+                                    .foregroundStyle(Color.white)
+                                Text(viewModel.balance.formatted())
+                                    .font(.title3)
+                                    .foregroundStyle(Color.white)
+                                    .fontWeight(.bold)
                             }
-                            VStack {
-                                Text(displayMonth)
-                                    .font(.title)
-                                Text(year)
-                                    .font(.headline)
-                            }
-                            .padding(.horizontal, 20)
-                            Button (action: {
-                                datePointer += 1
-                                viewModel.getAllTransactions(date: "\(year)-\(month)")
-                            }){
-                                Image(systemName:"chevron.right")
-                                    .font(.title2)
+                            Spacer()
+                            VStack (alignment: .trailing){
+                                Text("Welcome,")
+                                    .foregroundStyle(Color.white)
+                                    .padding(0)
+                                Text(viewModel.name)
+                                    .foregroundStyle(Color.white)
+                                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             }
                             
-                        }
-                        .padding([.top, .horizontal], 20)
-                        
-                        if viewModel.isLoading {
-                            ProgressView("Loading...")
-                                .padding()
-                        } else {
-                            if (viewModel.transactions.isEmpty) {
-                                Text("No transactions yet.")
-                                    .font(.headline)
-                                    .padding(.vertical, 30)
-                            } else {
-                                MoneyChart(viewModel:viewModel)
+                            Image(systemName: "rectangle.portrait.and.arrow.right")
+                                .foregroundStyle(.white)
+                            .onTapGesture {
+                                viewModel.logout()
+                                landingVM.isAuthenticated = false
+                            }
                                 
-                                ForEach(viewModel.transactions) { item in
-                                    ListItem(category: item.t_category, title: item.t_name, amount: item.t_amount,
-                                             isExpense: item.t_type == "expense", date: item.t_date)
-                                    .onTapGesture {
-                                        showTransactionDetail = true
-                                        currentTransaction = item
-                                        print("current transaction: \(currentTransaction!.t_uid)")
+                        }
+                        .padding(20)
+                        .padding(.top, 80)
+                    }
+                    .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    Spacer()
+                }.ignoresSafeArea()
+                    .zIndex(2)
+                
+                if showTransactionDetail && currentTransaction != nil {
+                    TransactionDetail(show: $showTransactionDetail,
+                                      viewModel: TransactionViewModel(title: currentTransaction!.t_name,
+                                                                      isExpense: currentTransaction!.t_type == "expense",
+                                                                      categoryString: currentTransaction!.t_category
+                                                                      , amount: currentTransaction!.t_amount.formatted(), dateString: currentTransaction!.t_date),
+                                      uid: currentTransaction!.t_uid,
+                                      amount: currentTransaction!.t_amount.formatted()
+                    )
+                } else {
+                    
+                    //Content
+                    ScrollView {
+                        VStack (spacing: 20) {
+                            HStack {
+                                Button (action: {
+                                    datePointer -= 1
+                                    viewModel.getAllTransactions(date: "\(year)-\(month)")
+                                }){
+                                    Image(systemName:"chevron.backward")
+                                        .font(.title2)
+                                }
+                                VStack {
+                                    Text(displayMonth)
+                                        .font(.title)
+                                    Text(year)
+                                        .font(.headline)
+                                }
+                                .padding(.horizontal, 20)
+                                Button (action: {
+                                    datePointer += 1
+                                    viewModel.getAllTransactions(date: "\(year)-\(month)")
+                                }){
+                                    Image(systemName:"chevron.right")
+                                        .font(.title2)
+                                }
+                                
+                            }
+                            .padding([.top, .horizontal], 40)
+                            
+                            if viewModel.isLoading {
+                                ProgressView("Loading...")
+                                    .padding()
+                            } else {
+                                if (viewModel.transactions.isEmpty) {
+                                    Text("No transactions yet.")
+                                        .font(.headline)
+                                        .padding(.vertical, 30)
+                                } else {
+                                    MoneyChart(viewModel:viewModel)
+                                    
+                                    ForEach(viewModel.transactions) { item in
+                                        
+                                        ListItem(category: item.t_category, title: item.t_name, amount: item.t_amount,
+                                                 isExpense: item.t_type == "expense", date: item.t_date)
+                                        .onTapGesture {
+                                            currentTransaction = item
+                                            showTransactionDetail = true
+                                        }
+                                        
+                                        
                                     }
                                 }
                             }
                         }
+                        
                     }
+                    .refreshable {
+                        fetchData()
+                    }
+                    .padding(.top, 70)
+                    .zIndex(1)
                 }
-                .refreshable {
-                    fetchData()
-                }
-                .padding(.top, 70)
-                .zIndex(1)
-                
                 
                 //Add Button
                 VStack {
@@ -176,14 +194,15 @@ struct Home: View {
                     }
                 }
                 .zIndex(3)
+            }.onAppear {
+                fetchData()
             }
-        }.onAppear {
-            fetchData()
-        }
-        .onReceive(NotificationCenter.default.publisher(for: .reloadTransactions)) { notification in
-            fetchData()
+            .onReceive(NotificationCenter.default.publisher(for: .reloadTransactions)) { _ in
+                fetchData()
+            }
         }
     }
+    
 }
 
 

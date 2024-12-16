@@ -35,7 +35,6 @@ class SignUpViewModel: ObservableObject {
         
         let defaults = UserDefaults.standard
         let body = createSignUpRequestBody()
-        print(body)
                 
         WebService().signup(body: body) {
             result in switch result {

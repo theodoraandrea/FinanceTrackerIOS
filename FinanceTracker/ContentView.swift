@@ -18,12 +18,11 @@ struct ContentView: View {
     
     @EnvironmentObject var landingViewModel: LandingViewModel
 
-    @StateObject private var transactionViewModel = TransactionViewModel()
-    
+    //@StateObject private var transactionViewModel = TransactionViewModel()
     
     var body: some View {
-         if landingViewModel.isAuthenticated {
-             Home(viewModel: HomeViewModel(), path: $path)
+        if landingViewModel.isAuthenticated {
+            Home(viewModel: HomeViewModel(), landingVM: landingViewModel, path: $path)
          } else {
              Landing(viewModel: landingViewModel, path: $path)
          }

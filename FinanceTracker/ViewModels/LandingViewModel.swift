@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class LandingViewModel: ObservableObject {
     
@@ -46,9 +47,8 @@ class LandingViewModel: ObservableObject {
             }
         }
     }
-    
+        
     func initiateOauth() {
-                        
         WebService().startOAuth(){
             result in switch result {
             case .success(let url):
@@ -57,12 +57,12 @@ class LandingViewModel: ObservableObject {
                 }
                 
             case .failure(let error):
-                
                 self.errorMessage = error.localizedDescription
                 print(self.errorMessage)
             }
         }
     }
+    
     
     func forgotPassword() {
         WebService().forgotPassword(email: self.forgotPasswordEmail) {

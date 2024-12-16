@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
+import GoogleSignIn
 
 class HomeViewModel: ObservableObject {
-    @Published var isAuthenticated: Bool = true
     @Published var isLoading: Bool = false
     @Published var username: String = ""
     @Published var name: String = ""
@@ -42,9 +42,6 @@ class HomeViewModel: ObservableObject {
     func logout() {
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "jsonwebtoken")
-        DispatchQueue.main.async {
-            self.isAuthenticated = false
-        }
     }
     
     func getAllTransactions(date:String) {
@@ -66,6 +63,7 @@ class HomeViewModel: ObservableObject {
             }
         }
     }
+    
     
 }
 

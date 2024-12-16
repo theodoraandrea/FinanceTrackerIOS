@@ -32,9 +32,9 @@ struct Transaction: Codable, Hashable, Identifiable {
 }
 
 struct TransactionRequestBody: Codable {
-    let name: String?
-    let type: String?
-    let category: String?
-    let amount: Double?
-    let date: String?
+    let name: String
+    let type: String
+    let category: String
+    let amount: Double
+    let date: String
 }

@@ -353,9 +353,9 @@ class WebService {
         request.httpMethod = "DELETE"
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { _, response, error in
             
-            guard let data = data, error == nil else {
+            guard error == nil else {
                 completion(.failure(.noData))
                 return
             }

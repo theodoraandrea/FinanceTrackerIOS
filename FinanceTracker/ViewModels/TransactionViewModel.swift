@@ -8,18 +8,19 @@
 import SwiftUI
 
 class TransactionViewModel: ObservableObject {
-    @Published var title: String = ""
-    @Published var isExpense: Bool = true
-    @Published var category: TransactionCategory = .other
-    @Published var amount:String = "0"
-    @Published var date: Date = Date()
-    var item: Transaction?
+    @Published var title: String
+    @Published var isExpense: Bool
+    @Published var category: TransactionCategory
+    @Published var categoryString: String = ""
+    @Published var amount:String
+    @Published var dateString:String = ""
+    @Published var date: Date
     
-    func getTransaction(item:Transaction) -> () {
-        self.title = item.t_name
-        print(item.t_type)
-        self.isExpense = item.t_type == "expense" ? true : false
-        switch item.t_category {
+    init(title: String, isExpense: Bool, categoryString: String, amount: String, dateString: String) {
+        self.title = title
+        self.isExpense = isExpense
+        
+        switch categoryString {
         case "food":
             self.category = .food
         case "leisure":
@@ -32,23 +33,37 @@ class TransactionViewModel: ObservableObject {
             self.category = .other
         }
         
-        
-        self.amount = item.t_amount.formatted()
+        self.amount = amount
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        self.date = dateFormatter.date(from: item.t_date)!
+        self.date = dateFormatter.date(from: dateString)!
+        self.date = date
+    }
+    
+    init () {
+        self.title = ""
+        self.isExpense = true
+        self.category = .other
+        self.amount = "0"
+        self.date = Date()
     }
     
     func createRequestBody() -> TransactionRequestBody {
         amount.removeAll(where: {$0 == "."})
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd" // Specify your desired format
+        formatter.timeZone = .current       // Use the current time zone
+        formatter.locale = .current         // Use the current locale
+        let formattedDate = formatter.string(from: self.date)
                 
         return TransactionRequestBody(
             name:self.title,
             type: self.isExpense ? "expense" : "income",
             category: self.category.rawValue,
             amount: Double(amount)!,
-            date: date.formatted(.iso8601.year().month().day())
+            date: formattedDate
         )
     }
     
@@ -58,9 +73,7 @@ class TransactionViewModel: ObservableObject {
         }
                 
         let body = createRequestBody()
-        
-        print(body)
-        
+                
         WebService().addTransaction(token: token, body: body) {
             result in switch result {
             case .success(let message):
@@ -81,9 +94,7 @@ class TransactionViewModel: ObservableObject {
         }
         
         let body = createRequestBody()
-        
-        print(body)
-        
+                
         WebService().updateTransaction(token: token, uid: uid, body: body) {
             result in switch result {
             case .success(let message):

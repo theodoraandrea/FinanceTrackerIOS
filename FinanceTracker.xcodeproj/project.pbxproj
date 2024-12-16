@@ -19,7 +19,6 @@
 		E931FEB82CE3A86F00FA3DB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931FEB72CE3A86F00FA3DB1 /* User.swift */; };
 		E9960B8E2CEA33B90023643D /* TransactionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960B8D2CEA33B90023643D /* TransactionForm.swift */; };
 		E9960B902CEA33E00023643D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960B8F2CEA33E00023643D /* Transaction.swift */; };
-		E9960B922CEA37FA0023643D /* AddTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960B912CEA37FA0023643D /* AddTransaction.swift */; };
 		E9960B942CEA38880023643D /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9960B932CEA38880023643D /* TransactionViewModel.swift */; };
 		E9CB13FB2CE47EEE00A73A28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E9CB13FA2CE47EEE00A73A28 /* FirebaseAnalytics */; };
 		E9CB13FD2CE47EEE00A73A28 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E9CB13FC2CE47EEE00A73A28 /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -34,6 +33,9 @@
 		E9D70F322CF5A2220010401A /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F2C2CF5A2220010401A /* ForgotPassword.swift */; };
 		E9D70F332CF5A2220010401A /* NumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F2D2CF5A2220010401A /* NumberPad.swift */; };
 		E9D70F342CF5A2220010401A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D70F2E2CF5A2220010401A /* TextField.swift */; };
+		E9ED1A3F2D0F12A200A72A75 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E9ED1A3E2D0F12A200A72A75 /* GoogleSignIn */; };
+		E9ED1A412D0F12A200A72A75 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E9ED1A402D0F12A200A72A75 /* GoogleSignInSwift */; };
+		E9ED1A482D0F17F500A72A75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9ED1A472D0F17F300A72A75 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +51,8 @@
 		E931FEB72CE3A86F00FA3DB1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E9960B8D2CEA33B90023643D /* TransactionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionForm.swift; sourceTree = "<group>"; };
 		E9960B8F2CEA33E00023643D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		E9960B912CEA37FA0023643D /* AddTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransaction.swift; sourceTree = "<group>"; };
 		E9960B932CEA38880023643D /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		E9ADB2232D0FC1A000EB6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E9CB13FE2CE4897200A73A28 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		E9CB14002CE489AD00A73A28 /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
 		E9CB14022CE48A1700A73A28 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -62,6 +64,8 @@
 		E9D70F2C2CF5A2220010401A /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		E9D70F2D2CF5A2220010401A /* NumberPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPad.swift; sourceTree = "<group>"; };
 		E9D70F2E2CF5A2220010401A /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		E9ED1A462D0F179100A72A75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E9ED1A472D0F17F300A72A75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9ED1A412D0F12A200A72A75 /* GoogleSignInSwift in Frameworks */,
 				E90FCE612D0D693B0046BE38 /* SafariView in Frameworks */,
+				E9ED1A3F2D0F12A200A72A75 /* GoogleSignIn in Frameworks */,
 				E9CB13FB2CE47EEE00A73A28 /* FirebaseAnalytics in Frameworks */,
 				E9CB13FD2CE47EEE00A73A28 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
@@ -81,6 +87,8 @@
 		E931FE912CE2FFF400FA3DB1 = {
 			isa = PBXGroup;
 			children = (
+				E9ED1A462D0F179100A72A75 /* Info.plist */,
+				E9ED1A472D0F17F300A72A75 /* GoogleService-Info.plist */,
 				E931FE9C2CE2FFF400FA3DB1 /* FinanceTracker */,
 				E931FE9B2CE2FFF400FA3DB1 /* Products */,
 			);
@@ -97,6 +105,7 @@
 		E931FE9C2CE2FFF400FA3DB1 /* FinanceTracker */ = {
 			isa = PBXGroup;
 			children = (
+				E9ADB2232D0FC1A000EB6BB8 /* Info.plist */,
 				E931FEB62CE3A86400FA3DB1 /* Models */,
 				E931FEAF2CE3250300FA3DB1 /* ViewModels */,
 				E931FEAC2CE31FF700FA3DB1 /* Services */,
@@ -160,7 +169,6 @@
 		E933629A2CF5BFD200EE754D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E9960B912CEA37FA0023643D /* AddTransaction.swift */,
 				E9D70F2C2CF5A2220010401A /* ForgotPassword.swift */,
 				E9D70F2B2CF5A2220010401A /* ListItem.swift */,
 				E9D70F2A2CF5A2220010401A /* MoneyChart.swift */,
@@ -193,6 +201,8 @@
 				E9CB13FA2CE47EEE00A73A28 /* FirebaseAnalytics */,
 				E9CB13FC2CE47EEE00A73A28 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				E90FCE602D0D693B0046BE38 /* SafariView */,
+				E9ED1A3E2D0F12A200A72A75 /* GoogleSignIn */,
+				E9ED1A402D0F12A200A72A75 /* GoogleSignInSwift */,
 			);
 			productName = FinanceTracker;
 			productReference = E931FE9A2CE2FFF400FA3DB1 /* FinanceTracker.app */;
@@ -225,6 +235,7 @@
 			packageReferences = (
 				E9CB13F92CE47EEE00A73A28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				E90FCE5F2D0D693B0046BE38 /* XCRemoteSwiftPackageReference "SafariView" */,
+				E9ED1A3D2D0F12A200A72A75 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = E931FE9B2CE2FFF400FA3DB1 /* Products */;
 			projectDirPath = "";
@@ -241,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E931FEA52CE2FFF600FA3DB1 /* Preview Assets.xcassets in Resources */,
+				E9ED1A482D0F17F500A72A75 /* GoogleService-Info.plist in Resources */,
 				E931FEA22CE2FFF600FA3DB1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +270,6 @@
 				E9D70F342CF5A2220010401A /* TextField.swift in Sources */,
 				E9D70F302CF5A2220010401A /* MoneyChart.swift in Sources */,
 				E9D70F282CF5A02C0010401A /* Helper.swift in Sources */,
-				E9960B922CEA37FA0023643D /* AddTransaction.swift in Sources */,
 				E9CB14052CE48BF100A73A28 /* SignUpViewModel.swift in Sources */,
 				E931FEB52CE39F9A00FA3DB1 /* LandingViewModel.swift in Sources */,
 				E931FEB82CE3A86F00FA3DB1 /* User.swift in Sources */,
@@ -409,6 +420,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FinanceTracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinanceTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,6 +449,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FinanceTracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinanceTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -495,6 +508,14 @@
 				minimumVersion = 11.5.0;
 			};
 		};
+		E9ED1A3D2D0F12A200A72A75 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -512,6 +533,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E9CB13F92CE47EEE00A73A28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		E9ED1A3E2D0F12A200A72A75 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9ED1A3D2D0F12A200A72A75 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		E9ED1A402D0F12A200A72A75 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9ED1A3D2D0F12A200A72A75 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
